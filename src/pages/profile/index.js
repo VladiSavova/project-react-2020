@@ -4,7 +4,6 @@ import styles from './index.module.css';
 import Title from '../../components/title';
 import { useParams, useHistory } from 'react-router-dom';
 // import Posts from '../../components/posts';
-// import ComponentErrorBoundery from '../../components/component-erroBoundery';
 import UserInfo from '../../components/user-profile-info';
 
 

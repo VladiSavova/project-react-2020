@@ -4,8 +4,6 @@ import Title from '../../components/title';
 import LinkButton from '../../components/button/link-button';
 import PageLayout from '../../components/page-layout';
 
-
-
 const UserInfo = ({ user }) => {
 
     if (!user) {
