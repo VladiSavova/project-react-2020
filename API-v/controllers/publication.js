@@ -26,13 +26,13 @@ module.exports = {
     },
 
     post: (req, res, next) => {
-        const { title, carModel, description, image } = req.body;
+        const { title, description, image } = req.body;
         const { _id } = req.user;
 
-        if (!title || !carModel || !description) {
+        if (!title  || !description) {
             return res.status(400).send('Invalid data!');
         }
-        models.Publication.create({ title, carModel, description, image, author: _id })
+        models.Publication.create({ title, description, image, author: _id })
             .then((createdPublication) => {
                 return Promise.all([
                     models.User.updateOne({ _id }, { $push: { posts: createdPublication } }),

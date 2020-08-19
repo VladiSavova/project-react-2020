@@ -104,13 +104,13 @@ module.exports = {
     put: (req, res, next) => {
         const id = req.params.id;
         console.log(id);
-        const { username, carModel, avatar } = req.body;
+        const { username, avatar } = req.body;
 
         if (!username.match(/^[a-zA-z0-9]{3,}$/)) {
             return res.status(400).send('Username must consist only letters and digits and to be atleast 3 charecters long!');
         }
 
-        models.User.updateOne({ _id: id }, { username, carModel, avatar })
+        models.User.updateOne({ _id: id }, { username,  avatar })
             .then((updatedUser) => res.send(updatedUser))
             .catch(next)
     },

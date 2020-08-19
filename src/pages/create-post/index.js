@@ -51,7 +51,6 @@ const CreatePostPage = () => {
         }).catch(e => {
             setErrorMsg('Something went wrong!');
         })
-
     }
 
     return (

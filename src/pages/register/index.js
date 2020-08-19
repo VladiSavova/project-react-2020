@@ -42,7 +42,6 @@ const RegisterPage = () => {
                 username,
                 password,
                 rePassword,
-                carModel: '',
                 avatar: ''
             },
             (user) => {

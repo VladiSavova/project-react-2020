@@ -3,9 +3,8 @@ import PageLayout from '../../components/page-layout';
 import styles from './index.module.css';
 import Title from '../../components/title';
 import { useParams, useHistory } from 'react-router-dom';
-// import Posts from '../../components/posts';
 import UserInfo from '../../components/user-profile-info';
-
+import Posts from '../../components/About-Post/allPosts'
 
 const ProfilePage = () => {
     const [user, setUser] = useState(null);
@@ -46,6 +45,7 @@ const ProfilePage = () => {
         
         <PageLayout>
             <UserInfo user={user} />
+            <Posts userId={user._id} title='My Posts' noPostsMsg="You don't have any posts yet. Write some posts and here will see them." />
         </PageLayout>
     )
 }
