@@ -7,7 +7,11 @@ const getNavigation = (loggedIn, user) => {
         },
         {
             title: 'Destinations',
-            link: '/forum'
+            link: '/blog'
+        },
+        {
+            title: 'Create',
+            link: '/blog/create-post'
         },
         {
             title: 'Profile',

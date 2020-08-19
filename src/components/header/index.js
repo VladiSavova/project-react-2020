@@ -25,7 +25,6 @@ const Header = () => {
     return (
 
         <header className={styles.navigation} >
-           
             {
                 links.map(navElement => {
                     if (navElement.title === 'Logout') {

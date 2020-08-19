@@ -12,49 +12,22 @@ import getCookie from '../../utils/getCookie';
 const CreatePostPage = () => {
     const [title, setTitle] = useState('');
     const [description, setDescription] = useState('');
-    const [model, setModel] = useState('');
-    const [loading, setLoading] = useState(false);
     const [image, setImage] = useState('');
+    // const [loading, setLoading] = useState(false);
     const [errorMsg, setErrorMsg] = useState('');
 
     const history = useHistory();
-
-    const uploadImage = async (e) => {
-        const files = e.target.files;
-
-        const data = new FormData();
-        data.append('file', files[0]);
-        data.append('upload_preset', 'VWimages');
-
-        setLoading(true);
-
-        const res = await fetch('https://api.cloudinary.com/v1_1/dbnasko/image/upload', {
-            method: 'POST',
-            body: data
-        });
-
-        const file = await res.json();
-
-        setImage(file.secure_url);
-        setLoading(false);
-
-    }
 
     const handleSubmit = async (e) => {
         e.preventDefault();
 
         if (title === '') {
-            setErrorMsg('Please provide Title!');
-            return;
-        }
-
-        if (model === '') {
-            setErrorMsg('Please specify Car Model!');
+            setErrorMsg('Please write Title!');
             return;
         }
 
         if (description === '') {
-            setErrorMsg('Please provide Description!');
+            setErrorMsg('Please write Description!');
             return;
         }
 
@@ -62,7 +35,6 @@ const CreatePostPage = () => {
             method: 'POST',
             body: JSON.stringify({
                 title,
-                carModel: model,
                 description,
                 image
             }),
@@ -72,10 +44,10 @@ const CreatePostPage = () => {
             }
         }).then(res => {
             if (res.status === 400) {
-                setErrorMsg('Title, Car Model and Description are required fields!');
+                setErrorMsg('Requried fields!');
                 return;
             }
-            history.push('/forum');
+            history.push('/blog');
         }).catch(e => {
             setErrorMsg('Something went wrong!');
         })
@@ -97,16 +69,6 @@ const CreatePostPage = () => {
                         id='title'
                         placeholder='Title...'
                     />
-                    <Input
-                        value={model}
-                        onChange={(e) => {
-                            setModel(e.target.value);
-                            setErrorMsg(null);
-                        }}
-                        label='Car Model'
-                        id='car-model'
-                        placeholder='VW Passat B7...'
-                    />
                     <Textarea
                         value={description}
                         onChange={(e) => {
@@ -117,14 +79,7 @@ const CreatePostPage = () => {
                         id='description'
                         placeholder='Describe your post...'
                     />
-                    <Input
-                        type='file'
-                        onChange={uploadImage}
-                        label='Image'
-                        id='image'
-                        placeholder='Upload an image'
-                    />
-     
+ 
                     {errorMsg ? (<ErrorMsg msg={errorMsg} />) : null}
                     <SubmitButton title='Create' />
                 </form>

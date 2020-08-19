@@ -2,7 +2,7 @@ import React from 'react';
 import PageLayout from '../../components/page-layout';
 
 
-const ForumPage = () => {
+const Blog = () => {
 
     return (
         <PageLayout>
@@ -11,4 +11,4 @@ const ForumPage = () => {
     )
 }
 
-export default ForumPage;
+export default Blog;
