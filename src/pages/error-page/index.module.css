@@ -1,0 +1,15 @@
+.container {
+    text-align: center;
+   }
+
+h1{
+    text-align: center;
+    padding-top: 2em;
+}
+
+.error {
+    padding-left: 15em;
+    height: 400px;
+    width: 650px;
+    
+}

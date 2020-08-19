@@ -1,0 +1,19 @@
+.submit {
+    margin: 0.5em 0.5em;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 0.2em;
+    color: olivedrab;
+    font-size: 1.2rem;
+    /* box-sizing: 2px 2px 2px black; */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.568);
+
+}
+
+.submit:hover {
+    cursor: pointer;
+    background-color: white;
+    font-weight: bold;
+    color: black;
+
+}

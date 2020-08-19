@@ -1,0 +1,16 @@
+.container{
+    text-align: center;
+}
+
+.form {
+    max-width: 40em;
+    min-width: 15em;
+    background-color: rgba(255, 255, 255, 0.904);
+   
+    margin: 3em auto;
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    
+}
+

@@ -1,0 +1,22 @@
+.label {
+    margin: 0 0 0.2em 0;
+    color: black;
+    font-size: 1.5rem;
+}
+
+.textarea {
+    text-decoration: inherit;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid rgb(7, 1, 31);
+    font-family: system-ui;
+    font-size: 1rem;
+    padding: 0.5rem 1.5rem;
+    height: 100px;
+}
+
+.form-div {
+    margin: 1em 1em 0 1em;
+    display: flex;
+    flex-direction: column;
+}
