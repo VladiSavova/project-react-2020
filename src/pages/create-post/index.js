@@ -69,6 +69,16 @@ const CreatePostPage = () => {
                         id='title'
                         placeholder='Title...'
                     />
+                     <Input
+                        value={image}
+                        onChange={(e) => {
+                            setImage(e.target.value);
+                            setErrorMsg(null);
+                        }}
+                        label='ImageUrl'
+                        id='image'
+                        placeholder='ImageUrl...'
+                    />
                     <Textarea
                         value={description}
                         onChange={(e) => {

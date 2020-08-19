@@ -6,7 +6,7 @@ const Blog = () => {
 
     return (
         <PageLayout>
-         
+            <h1>HERE MUST PUT ALL POSTS</h1>
         </PageLayout>
     )
 }
