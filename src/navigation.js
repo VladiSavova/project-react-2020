@@ -11,7 +11,7 @@ import LoginPage from './pages/login';
 import UserContext from './Context';
 import BlogPage from './pages/blog';
 import CreatePostPage from './pages/create-post';
-// import PostDetailsPage from './pages/details-post';
+import PostDetailsPage from './pages/post-details/index';
 import ProfilePage from './pages/profile';
 import UpdateProfilePage from './pages/update-profile';
 // import CommentPostPage from './pages/comment-post';
@@ -47,12 +47,13 @@ const Navigation = () => {
                 <Route path='/blog/create-post'>
                     {loggedIn ? (<CreatePostPage />) : (<Redirect to='/login' />)}
                 </Route>
-                <Route component={Error} />
-
-                {/*
                 <Route path='/blog/post/:postId' >
                     {loggedIn ? (<PostDetailsPage />) : (<Redirect to='/login' />)}
                 </Route>
+                <Route component={Error} />
+
+                {/*
+               
                 <Route path='/blog/comment-post/:postId' >
                     {loggedIn ? (<CommentPostPage />) : (<Redirect to='/login' />)}
                 </Route>
