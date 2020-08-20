@@ -8,10 +8,11 @@
     text-align: center;
 }
 
-.image {
+.img {
     margin-top: 10px;
     width: 200px;
     height: auto;
+   padding-left: 20em;
 }
 
 .info {

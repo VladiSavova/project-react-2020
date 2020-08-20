@@ -83,7 +83,7 @@ const PostDetailsPage = () => {
                         (<SubmitButton title='Delete Post' onClick={handleDelete} />) :
                         (<SubmitButton title={likeBtnTitle}   />)
                         } */}
-                    {isAuthor ? (<LinkButton href={`/forum/update-post/${id}`} title='Update Post' />) : null}
+                    {isAuthor ? (<LinkButton href={`/blog/update-post/${id}`} title='Edit Post' />) : null}
                 </Container>
                 
 

@@ -3,6 +3,7 @@ import styles from './index.module.css';
 import Title from '../../components/title';
 import LinkButton from '../../components/button/link-button';
 import PageLayout from '../../components/page-layout';
+import snimka from "../../images/avatar.jpg";
 
 const UserInfo = ({ user }) => {
 
@@ -20,10 +21,10 @@ const UserInfo = ({ user }) => {
     return (
         <section className={styles.details}>
             <h1>Hello, {user.username} !</h1>
+            <img className='image' src={snimka}/>
             <LinkButton href={`/update-profile/${user._id}`} title='Edit username' />
-            {/* <h3>Here is your profile page.</h3> */}
             <div className={styles.info}>
-                <h3 className={styles.model}>You have: {user.posts.length} posts. </h3>
+                <h3>You have: {user.posts.length} posts. </h3>
             </div>
          
         </section>
