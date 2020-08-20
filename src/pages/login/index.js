@@ -5,8 +5,8 @@ import Title from '../../components/title';
 import Input from '../../components/input';
 import SubmitButton from '../../components/button/submit-button';
 import ErrorMsg from '../../components/error-msg';
-import authenticate from '../../utils/authenticate';
-import UserContext from '../../Context';
+import authenticate from '../../services/authenticate';
+import UserContext from '../../Context/Context';
 import { useHistory } from 'react-router-dom';
 
 const LoginPage = () => {

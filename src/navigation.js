@@ -8,7 +8,7 @@ import {
 import RegisterPage from './pages/register';
 import HomePage from './pages/home';
 import LoginPage from './pages/login';
-import UserContext from './Context';
+import UserContext from './Context/Context';
 import BlogPage from './pages/blog';
 import CreatePostPage from './pages/create-post';
 import PostDetailsPage from './pages/post-details/index';

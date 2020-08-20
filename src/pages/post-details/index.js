@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useContext, useCallback } from 'react';
 import styles from './index.module.css';
 import { useParams, useHistory } from 'react-router-dom';
-import UserContext from '../../Context';
+import UserContext from '../../Context/Context';
 import getCookie from '../../utils/getCookie';
 import PageLayout from '../../components/page-layout';
 import Title from '../../components/title';

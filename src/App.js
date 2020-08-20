@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import UserContext from './Context';
+import UserContext from './Context/Context';
 import getCookie from './utils/getCookie';
 
 class App extends Component {

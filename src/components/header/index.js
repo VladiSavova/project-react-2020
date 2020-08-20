@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import styles from './index.module.css';
 import Link from '../link';
 import getNavigation from '../../utils/navigation';
-import UserContext from '../../Context'
+import UserContext from '../../Context/Context'
 import { useHistory } from 'react-router-dom'
 
 const Header = () => {
