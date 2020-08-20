@@ -5,10 +5,10 @@ import Title from '../../title';
 import ContainerSection from '../../container/index';
 
 
+
 const Posts = ({ userId, title, noPostsMsg }) => {
 
     const [posts, setPosts] = useState([]);
-    const [searchedPosts, setSearchedPosts] = useState([])
 
     const getPosts = useCallback(async () => {
         const promise = await fetch('http://localhost:9999/api/publication');

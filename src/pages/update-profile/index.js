@@ -3,15 +3,12 @@ import styles from './index.module.css';
 import PageLayout from '../../components/page-layout';
 import Title from '../../components/title';
 import Input from '../../components/input';
-import ErrorMsg from '../../components/error-msg'
 import { useHistory, useParams } from 'react-router-dom';
 import SubmitButton from '../../components/button/submit-button';
 
 
 const UpdateProfilePage = () => {
     const [username, setUsername] = useState('');
-    // const [avatar, setAvatar] = useState('');
-    const [loading, setLoading] = useState(false);
     const [errorMsg, setErrorMsg] = useState('');
     const params = useParams();
     const history = useHistory();
