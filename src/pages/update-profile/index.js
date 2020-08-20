@@ -26,7 +26,6 @@ const UpdateProfilePage = () => {
         } else {
             const user = await response.json();
             setUsername(user.username);
-            // setAvatar('');
         }
     }, [id, history])
 
@@ -46,7 +45,6 @@ const UpdateProfilePage = () => {
             method: 'PUT',
             body: JSON.stringify({
                 username,
-                // avatar
             }),
             headers: {
                 'Content-Type' : 'application/json',
@@ -67,7 +65,7 @@ const UpdateProfilePage = () => {
     return (
         <PageLayout>
             <section className={styles.details}>
-                <Title title='Edit your information' />
+                <Title title='Edit your Username' />
                 <form className={styles.form} onSubmit={handleSubmit}>
                     <Input
                         value={username}
@@ -75,13 +73,7 @@ const UpdateProfilePage = () => {
                         label='Username'
                         id='username'
                     />
-                    {/* <Input
-                        type='string'
-                        label='Avatar'
-                        id='avatar'
-                        placeholder='image url'
-                    /> */}
-                    <SubmitButton title='Update' />
+                    <SubmitButton title='Edit' />
                 </form>
             </section>
         </PageLayout>

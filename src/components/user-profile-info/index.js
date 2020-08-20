@@ -20,12 +20,12 @@ const UserInfo = ({ user }) => {
     return (
         <section className={styles.details}>
             <h1>Hello, {user.username} !</h1>
-            <h3>Here is your profile page.</h3>
+            <LinkButton href={`/update-profile/${user._id}`} title='Edit username' />
+            {/* <h3>Here is your profile page.</h3> */}
             <div className={styles.info}>
-                <h2>Username: {user.username}</h2>
                 <h3 className={styles.model}>You have: {user.posts.length} posts. </h3>
             </div>
-            <LinkButton href={`/update-profile/${user._id}`} title='Update Profile' />
+         
         </section>
     )
 }

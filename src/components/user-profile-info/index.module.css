@@ -1,30 +1,20 @@
 .details {
     width: 60em;
-    margin: 3em auto;
+    margin: 1em auto;
     /* background-color: rgba(255, 255, 255, 0.904); */
     padding: 1em;
     text-align: center;
 }
 
-.image {
+/* .image {
     margin-top: 10px;
     width: 200px;
     height: auto;
-}
+} */
 
-.info {
+/* .info {
     text-align: center;
     margin: 10px;
     margin-top: 5em;
     
-}
-
-.model {
-    margin-top: 10px;
-    margin-bottom: 10px;
-
-}
-.author {
-    margin-top: 10px;
-    text-align: right;
-}
+} */
