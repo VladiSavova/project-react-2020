@@ -14,7 +14,7 @@ const publicationSchema = new Schema({
     },
     image: {
         type: String,
-        // default: ''
+        required: true,
         },
     author: {
         type: ObjectId,
