@@ -14,7 +14,10 @@ const PostDetailsPage = () => {
 
     const [post, setPost] = useState(null);
     const [isAuthor, setIsAuthor] = useState(false);
-    const [errorMsg, setErrorMsg] = useState('');
+    const [isLiked, setIsLiked] = useState(null);
+    // const [comment, setComment] = useState('');
+    // const [errorMsg, setErrorMsg] = useState('');
+    // const [newComment, setNewComment] = useState([]);
 
     const context = useContext(UserContext);
     const params = useParams();
@@ -22,6 +25,8 @@ const PostDetailsPage = () => {
 
     const idString = params.postId;
     const id = idString.replace(':', '');
+
+    const likeBtnTitle = isLiked ? 'Already Liked' : 'Like Post';
 
     const getPost = useCallback(async () => {
         const response = await fetch(`http://localhost:9999/api/publication/details?id=${id}`);
@@ -37,13 +42,29 @@ const PostDetailsPage = () => {
 
             setPost(post);
             setIsAuthor(isAuthor);
+            setIsLiked(isLiked);
         }
     }, [context.user.id, history, id])
 
     useEffect(() => {
         getPost();
-    }, [getPost])
+    }, [getPost, ])
 
+    const handleLike = async () => {
+        const response = await fetch(`http://localhost:9999/api/publication/like-post?id=${id}`, {
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': getCookie('x-auth-token')
+            }
+        });
+
+        if (!response.ok) {
+            history.push('/error');
+        } else {
+
+            setIsLiked(true);
+        }
+    }
 
     const handleDelete = async () => {
         const response = await fetch(`http://localhost:9999/api/publication?id=${id}`, {
@@ -62,10 +83,11 @@ const PostDetailsPage = () => {
 
     }
 
+   
     if (!post) {
         return (
             <PageLayout>
-                <section className={styles['load']}>
+                <section className={styles['loading-details']}>
                     <div>Loading...</div>
                 </section>
             </PageLayout>
@@ -75,18 +97,14 @@ const PostDetailsPage = () => {
     return (
 
         <PageLayout>
-           
                 <Container>
                     <Title title={post.title} />
                     <PostDetailsInfo post={post} />
-                    {/* {isAuthor ?
-                        (<SubmitButton title='Delete Post' onClick={handleDelete} />) :
-                        (<SubmitButton title={likeBtnTitle}   />)
-                        } */}
-                    {isAuthor ? (<LinkButton href={`/blog/update-post/${id}`} title='Edit Post' />) : null}
+                    {isAuthor ?
+                        (<SubmitButton title='Delete Post' onClick={handleDelete} />) : null
+                        }
+                    {isAuthor ? (<LinkButton href={`/forum/update-post/${id}`} title='Update Post' />) : null}
                 </Container>
-                
-
         </PageLayout>
     )
 }
