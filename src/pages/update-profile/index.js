@@ -61,18 +61,19 @@ const UpdateProfilePage = () => {
 
     return (
         <PageLayout>
-            <section className={styles.details}>
-                <Title title='Edit your Username' />
+            <div className={styles.container}>
                 <form className={styles.form} onSubmit={handleSubmit}>
+                    <Title title='Edit Profile' />
                     <Input
                         value={username}
                         onChange={(e) => setUsername(e.target.value)}
                         label='Username'
                         id='username'
                     />
+                    
                     <SubmitButton title='Edit' />
                 </form>
-            </section>
+            </div>
         </PageLayout>
     )
 

@@ -3,7 +3,7 @@
     padding: 0.5rem;
     border: none;
     border-radius: 0.2em;
-    color: olivedrab;
+    color: black;
     font-size: 1.2rem;
     /* box-sizing: 2px 2px 2px black; */
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.568);
@@ -12,8 +12,9 @@
 
 .submit:hover {
     cursor: pointer;
-    background-color: white;
+    background-color: black;
     font-weight: bold;
-    color: black;
+    color: white;
+
 
 }
