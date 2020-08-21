@@ -1,9 +1,7 @@
 import React from 'react';
 import styles from './index.module.css';
 import LinkButton from '../../button/link-button';
-import Values from '../values/index';
-
-
+// import Values from '../values/index';
 
 const Post = ({ title, image, description, comments, likes, author, _id }) => {
 

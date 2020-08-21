@@ -10,7 +10,7 @@ const ErrorPage = () => {
         <div className='container'>
            <Header/>
            <h1>Ooopps...</h1>
-            <img src={error} alt='error-image' className={styles['error']}/>
+            <img src={error} alt="errrorrr" className={styles['error']}/>
             <Footer/>
         </div>
         
