@@ -21,8 +21,13 @@ const UserInfo = ({ user }) => {
     return (
         <section className={styles.details}>
             <h1>Hello, {user.username} !</h1>
-            <img  className='image' src={snimka} alt="imageAvatar"/>
-            <LinkButton href={`/update-profile/${user._id}`} title='Edit username' />
+            <div className="url">
+                <img  className='image' src={snimka} alt="imageAvatar"/>
+            </div>
+            <div className="btn">
+                <LinkButton href={`/update-profile/${user._id}`} title='Edit username' />
+            </div>
+           
             <div className={styles.info}>
                 <h3>You have: {user.posts.length} posts. </h3>
             </div>

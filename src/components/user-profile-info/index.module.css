@@ -1,21 +1,30 @@
 .details {
     width: 60em;
-    margin: 1em auto;
+    margin: 3em auto;
     /* background-color: rgba(255, 255, 255, 0.904); */
     padding: 1em;
     text-align: center;
+    
+ 
 }
-
+.url{
+    padding-bottom: 10em;
+}
 .image {
     margin-top: 10px;
     width: 200px;
     height: auto;
     padding-left: 40em;
+    
 }
 
-/* .info {
+.btn {
+    padding-bottom: 1em;
+}
+
+.info {
     text-align: center;
     margin: 10px;
-    margin-top: 5em;
-    
-} */
+    margin-top: 2em;
+    font-size: larger;
+}

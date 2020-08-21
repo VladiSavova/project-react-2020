@@ -1,0 +1,16 @@
+.image {
+    margin-top: 10px;
+    width: 940px;
+    height: auto;
+ 
+}
+
+.info {
+    text-align: center;
+    margin: 30px
+}
+
+.author {
+    margin-top: 10px;
+    text-align: right;
+}
