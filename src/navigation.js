@@ -14,7 +14,6 @@ import CreatePostPage from './pages/create-post';
 import PostDetailsPage from './pages/post-details/index';
 import ProfilePage from './pages/profile';
 import UpdateProfilePage from './pages/update-profile';
-import EditPostPage from './pages/edit-post';
 import Error from './pages/error-page';
 
 
@@ -50,9 +49,6 @@ const Navigation = () => {
                 </Route>
                 <Route path='/blog/post/:postId' >
                     {loggedIn ? (<PostDetailsPage />) : (<Redirect to='/login' />)}
-                </Route>
-                <Route path='/blog/update-post/:postId'>
-                    {loggedIn ? (<EditPostPage />) : (<Redirect to='/login' />)}
                 </Route>
                 <Route component={Error} />
 

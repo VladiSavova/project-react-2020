@@ -39,7 +39,7 @@ const PostDetailsPage = () => {
             const postAuthorId = post.author._id;
             const currentUserId = context.user.id;
             const isAuthor = postAuthorId === currentUserId;
-
+            const isLiked = post.likes.includes(currentUserId);
             setPost(post);
             setIsAuthor(isAuthor);
             setIsLiked(isLiked);
@@ -101,9 +101,8 @@ const PostDetailsPage = () => {
                     <Title title={post.title} />
                     <PostDetailsInfo post={post} />
                     {isAuthor ?
-                        (<SubmitButton title='Delete Post' onClick={handleDelete} />) : null
-                        }
-                    {isAuthor ? (<LinkButton href={`/forum/update-post/${id}`} title='Update Post' />) : null}
+                        (<SubmitButton title='Delete Post' onClick={handleDelete} />) :
+                        (<SubmitButton title={likeBtnTitle} onClick={handleLike} disabled={isLiked ? true : false} />)}
                 </Container>
         </PageLayout>
     )
