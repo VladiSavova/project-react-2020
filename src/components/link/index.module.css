@@ -2,6 +2,7 @@
     color: white;
     text-decoration: none;
     height: 40px;
+    padding: 1.2em;
 }
 
 .header-list-item {
@@ -16,6 +17,5 @@
 
 .header-list-item:hover {
     border-top: none;
-    font-weight: bold;
-    background-color: #383838;
+    background-color:rgb(36, 56, 89);
 }

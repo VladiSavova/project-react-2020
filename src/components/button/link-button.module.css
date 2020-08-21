@@ -3,27 +3,27 @@
     padding: 0.5rem;
     border: none;
     border-radius: 0.5em;
-    color: black;
+    color: rgb(36, 56, 89);
     font-size: 1.2rem;
-    box-sizing: 2px 2px 2px black;
+    /* box-sizing: 2px 2px 2px black; */
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-
 }
 
 .btn:hover {
     cursor: pointer;
-    background-color: #383838;
+    background-color: rgb(71, 121, 156);
     /* font-weight: bold; */
     color: white;
 
 }
 
 .btn-link {
-    color: black;
+    color: rgb(36, 56, 89);
     text-decoration: none;
 
 }
 
 .btn-link:hover {
     color: white;
+    background-color: rgb(71, 121, 156);
 }

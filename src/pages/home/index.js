@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import PageLayout from '../../components/page-layout';
 import UserContext from '../../Context/Context'
 
-const HomePage = ({ user }) => {
+const HomePage = () => {
 
 const context = useContext(UserContext);
   const { loggedIn } = context;
