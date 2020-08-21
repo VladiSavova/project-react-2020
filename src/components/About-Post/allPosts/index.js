@@ -4,8 +4,6 @@ import Post from '../../About-Post/post';
 import Title from '../../title';
 import ContainerSection from '../../container/index';
 
-
-
 const Posts = ({ userId, title, noPostsMsg }) => {
 
     const [posts, setPosts] = useState([]);
@@ -45,7 +43,6 @@ const Posts = ({ userId, title, noPostsMsg }) => {
     return (
         <ContainerSection>
             <Title title={title} />
-
             <div className={styles['posts-container']}>
             {renderAllPosts()}
             </div>

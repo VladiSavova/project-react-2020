@@ -8,17 +8,12 @@ import Title from '../../components/title';
 import Container from '../../components/About-Post/post-details';
 import PostDetailsInfo from '../../components/About-Post/post-info';
 import SubmitButton from '../../components/button/submit-button';
-import LinkButton from '../../components/button/link-button';
 
 const PostDetailsPage = () => {
 
     const [post, setPost] = useState(null);
     const [isAuthor, setIsAuthor] = useState(false);
     const [isLiked, setIsLiked] = useState(null);
-    // const [comment, setComment] = useState('');
-    // const [errorMsg, setErrorMsg] = useState('');
-    // const [newComment, setNewComment] = useState([]);
-
     const context = useContext(UserContext);
     const params = useParams();
     const history = useHistory();

@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './index.module.css';
 import LinkButton from '../../button/link-button';
 
-const Post = ({ title, image, description, comments, likes, author, _id }) => {
+const Post = ({ title, image, description, likes, author, _id }) => {
 
     return (
         <div className={styles.post}>
@@ -11,7 +11,6 @@ const Post = ({ title, image, description, comments, likes, author, _id }) => {
             </div>
             <div className={styles.information}>
                 <h3>{title}</h3>
-                <h4 className={styles.description}>{description}</h4>
                 <LinkButton href={`/blog/post/:${_id}`} title='Details' />
             </div>
         </div>
