@@ -2,9 +2,10 @@
 This is my simple project made with Create-react-app.
 
 ## Project is Build with:
-### React - Front-end framework userd for front-end part for this project
-### Express - Back-end framework  used for back-end part for this project
-### Mongoose - Libraly for MongoDB and Node.js
+
+#### React - Front-end framework userd for front-end part for this project
+#### Express - Back-end framework  used for back-end part for this project
+#### Mongoose - Libraly for MongoDB and Node.js
 
 
 ## Project Functionalities:
