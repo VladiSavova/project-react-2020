@@ -11,14 +11,22 @@ This is my simple project made with Create-react-app.
 ## Project Functionalities:
 
 ### Public part (available for no-authenticate users/guests):
-#### register - where you can register a user
-#### login - login a register user
-#### Home page - just home page
-#### Posts page - you can see all posts and their details
+- register
+- login 
+- Home page 
 
 ### Private/user part (available for authenticate users):
-#### Create - can create posts 
-#### my profile - can see which posts are yours and can editypue username if you want
-#### can Delete post if you are author of it 
-#### can Like post if you are not author of it
-#### Can Logout from app 
+- create posts
+- all posts
+- my posts
+- my profile
+- edit username
+- delete post if you are author of it
+- like post if you are not author of it
+- logout
+
+## How to start project
+
+### Download project
+### In terminal install - npm install 
+### Project will run on http://localhost:3000
