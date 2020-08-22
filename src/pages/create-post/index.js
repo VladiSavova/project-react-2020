@@ -13,7 +13,6 @@ const CreatePostPage = () => {
     const [title, setTitle] = useState('');
     const [description, setDescription] = useState('');
     const [image, setImage] = useState('');
-    // const [loading, setLoading] = useState(false);
     const [errorMsg, setErrorMsg] = useState('');
 
     const history = useHistory();
@@ -23,6 +22,11 @@ const CreatePostPage = () => {
 
         if (title === '') {
             setErrorMsg('Please write Title!');
+            return;
+        }
+
+        if (image === '') {
+            setErrorMsg('Please add ImageUrl!');
             return;
         }
 

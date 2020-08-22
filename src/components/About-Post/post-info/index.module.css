@@ -16,7 +16,10 @@
 }
 
 .description {
+    /* text-align: center; */
     margin-bottom: 1em;
-    font-weight: 550;
+    font-weight: 520;
+    margin-left: 5em;
+    margin-right: 5em;
 }
 

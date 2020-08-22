@@ -16,7 +16,6 @@ import ProfilePage from './pages/profile';
 import UpdateProfilePage from './pages/update-profile';
 import Error from './pages/error-page';
 
-
 const Navigation = () => {
 
     const context = useContext(UserContext);
@@ -50,6 +49,7 @@ const Navigation = () => {
                 <Route path='/blog/post/:postId' >
                     {loggedIn ? (<PostDetailsPage />) : (<Redirect to='/login' />)}
                 </Route>
+
                 <Route component={Error} />
 
                 {/*
