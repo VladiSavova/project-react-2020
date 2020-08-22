@@ -57,13 +57,6 @@ module.exports = {
             .catch(next);
     },
 
-    // put: (req, res, next) => {
-    //     const id = req.params.id;
-    //     const { title, image, description } = req.body;
-    //     models.Publication.updateOne({ _id: id },  { title, image, description } )
-    //         .then((updatedPublication) => res.send(updatedPublication))
-    //         .catch(next)
-    // },
     put: (req, res, next) => {
         const id = req.params.id;
         const { title, description, image } = req.body;
