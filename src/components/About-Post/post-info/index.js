@@ -11,8 +11,7 @@ const PostDetailsInfo = ({ post }) => {
                 <Paragraph label='Author' value={post.author.username}/> 
                 <Paragraph label='Likes ♥' value={post.likes.length}/>       
                 <h3 className={styles.desc}>Description: </h3>
-                <p className={styles.description}>{post.description}</p> 
-                   
+                <p className={styles.description}>{post.description}</p>       
             </div>
     )
 }

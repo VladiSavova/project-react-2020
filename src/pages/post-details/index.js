@@ -8,6 +8,7 @@ import Title from '../../components/title';
 import Container from '../../components/About-Post/post-details';
 import PostDetailsInfo from '../../components/About-Post/post-info';
 import SubButton from '../../components/button/subBtn-button'
+import LinkButton from '../../components/button/link-button'
 const PostDetailsPage = () => {
 
     const [post, setPost] = useState(null);
@@ -29,7 +30,6 @@ const PostDetailsPage = () => {
             history.push('/error');
         } else {
             const post = await response.json();
-
             const postAuthorId = post.author._id;
             const currentUserId = context.user.id;
             const isAuthor = postAuthorId === currentUserId;
@@ -96,6 +96,7 @@ const PostDetailsPage = () => {
                     {isAuthor ?
                         (<SubButton title='Delete Post' onClick={handleDelete} />) :
                         (<SubButton title={likeBtnTitle} onClick={handleLike} disabled={isLiked ? true : false} />)}
+                   {isAuthor ? (<LinkButton href={`/blog/update-post/${id}`} title='Edit Post' />) : null}
                 </Container>
         </PageLayout>
     )

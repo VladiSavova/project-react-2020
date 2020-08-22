@@ -3,7 +3,8 @@ const { model } = require('mongoose');
 
 module.exports = {
     get: (req, res, next) => {
-        models.Publication.find().populate('author')
+        // models.Publication.find().populate('author')
+        models.Publication.find().sort({ _id: -1 }).populate('author')
             .then((publications) => {
                 res.send(publications)
             })
@@ -56,10 +57,18 @@ module.exports = {
             .catch(next);
     },
 
+    // put: (req, res, next) => {
+    //     const id = req.params.id;
+    //     const { title, image, description } = req.body;
+    //     models.Publication.updateOne({ _id: id },  { title, image, description } )
+    //         .then((updatedPublication) => res.send(updatedPublication))
+    //         .catch(next)
+    // },
     put: (req, res, next) => {
         const id = req.params.id;
-        const { description } = req.body;
-        models.Publication.updateOne({ _id: id }, { description })
+        const { title, description, image } = req.body;
+
+        models.Publication.updateOne({ _id: id }, { title, description, image })
             .then((updatedPublication) => res.send(updatedPublication))
             .catch(next)
     },
