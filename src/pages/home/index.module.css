@@ -8,7 +8,7 @@
     height: 700px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: url(../../images/air.jpg);
+  background-image: url(../../images/home-air.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -22,7 +22,7 @@
     height: 700px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: url(../../images/car.jpg);
+  background-image: url(../../images/air.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;

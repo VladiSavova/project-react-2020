@@ -4,7 +4,6 @@ import styles from './index.module.css';
 import PageLayout from '../../components/page-layout';
 import Title from '../../components/title';
 import Input from '../../components/input';
-import ErrorMsg from '../../components/error-msg';
 import SubmitButton from '../../components/button/submit-button';
 import Textarea from '../../components/textarea';
 import getCookie from '../../utils/getCookie';
@@ -114,7 +113,7 @@ const UpdatePostPage = () => {
                         id='description'
                         placeholder='Describe your post...'
                     />
-                    <SubmitButton title='Update' />
+                    <SubmitButton title='Edit' />
                 </form>
             </section>
 

@@ -93,8 +93,8 @@ const PostDetailsPage = () => {
                 <Container>
                     <Title title={post.title} />
                     <PostDetailsInfo  post={post} />
-                    {isAuthor ?
-                        (<SubButton title='Delete Post' onClick={handleDelete} />) :
+                    {isAuthor ? 
+                        (<SubButton title='Delete Post' className={styles.button} onClick={handleDelete} />) :
                         (<SubButton title={likeBtnTitle} onClick={handleLike} disabled={isLiked ? true : false} />)}
                    {isAuthor ? (<LinkButton href={`/blog/update-post/${id}`} title='Edit Post' />) : null}
                 </Container>
