@@ -1,12 +1,11 @@
 .container{
     text-align: center;
+    
 }
 
 .form {
     max-width: 40em;
     min-width: 15em;
-    background-color: rgba(255, 255, 255, 0.904);
-   
     margin: 3em auto;
     display: flex;
     flex-direction: column;
@@ -14,3 +13,16 @@
     
 }
 
+.container {
+    margin: 0;
+      width: auto;
+      height: 82vh;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-image: url(../../images/air.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    z-index: -100;
+  }
