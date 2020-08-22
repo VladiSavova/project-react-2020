@@ -1,8 +1,9 @@
 import React from 'react';
+import styles from './index.module.css';
 
 const Paragraph = ({label, value}) => {
     return (
-        <p>
+        <p  className={styles.par}>
             <span>{label}: {value}</span>
         </p>
     )

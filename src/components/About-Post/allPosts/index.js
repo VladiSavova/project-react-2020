@@ -43,7 +43,7 @@ const Posts = ({ userId, title, noPostsMsg }) => {
     return (
         <ContainerSection>
             <Title title={title} />
-            <div className={styles['posts-container']}>
+            <div className={styles['posts-all']}>
             {renderAllPosts()}
             </div>
         </ContainerSection>

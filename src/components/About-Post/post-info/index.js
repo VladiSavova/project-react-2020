@@ -1,16 +1,18 @@
 import React from 'react';
 import styles from './index.module.css';
-import Paragraph from '../../paragraph/index'
+import Paragraph from '../../paragraph/index';
+
 const PostDetailsInfo = ({ post }) => {
 
     return (
 
             <div className={styles.info}>
-                <img alt="postImage" src={post.image}></img>
+                <img alt="postImage" src={post.image}  className={styles.image} ></img>
                 <Paragraph label='Author' value={post.author.username}/> 
-                <h3>Post Description:</h3>
-                <p>{post.description}</p> 
-                <Paragraph label='Likes' value={post.likes.length}/>           
+                <Paragraph label='Likes ♥' value={post.likes.length}/>       
+                <h3 className={styles.desc}>Description: </h3>
+                <p className={styles.description}>{post.description}</p> 
+                   
             </div>
     )
 }

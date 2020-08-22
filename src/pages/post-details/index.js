@@ -7,8 +7,7 @@ import PageLayout from '../../components/page-layout';
 import Title from '../../components/title';
 import Container from '../../components/About-Post/post-details';
 import PostDetailsInfo from '../../components/About-Post/post-info';
-import SubmitButton from '../../components/button/submit-button';
-
+import SubButton from '../../components/button/subBtn-button'
 const PostDetailsPage = () => {
 
     const [post, setPost] = useState(null);
@@ -21,7 +20,7 @@ const PostDetailsPage = () => {
     const idString = params.postId;
     const id = idString.replace(':', '');
 
-    const likeBtnTitle = isLiked ? 'Already Liked' : 'Like Post';
+    const likeBtnTitle = isLiked ? 'Liked ♥' : 'Like ♥';
 
     const getPost = useCallback(async () => {
         const response = await fetch(`http://localhost:9999/api/publication/details?id=${id}`);
@@ -90,14 +89,13 @@ const PostDetailsPage = () => {
     }
 
     return (
-
         <PageLayout>
                 <Container>
                     <Title title={post.title} />
-                    <PostDetailsInfo post={post} />
+                    <PostDetailsInfo  post={post} />
                     {isAuthor ?
-                        (<SubmitButton title='Delete Post' onClick={handleDelete} />) :
-                        (<SubmitButton title={likeBtnTitle} onClick={handleLike} disabled={isLiked ? true : false} />)}
+                        (<SubButton title='Delete Post' onClick={handleDelete} />) :
+                        (<SubButton title={likeBtnTitle} onClick={handleLike} disabled={isLiked ? true : false} />)}
                 </Container>
         </PageLayout>
     )

@@ -1,0 +1,17 @@
+.sub {
+    margin: 0.5em 0.5em;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 0.2em;
+    color: white;
+    background-color: rgb(71, 121, 156);
+    font-size: 1.2rem;
+    margin-left: 34em;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.568);
+}
+
+.sub:hover {
+    cursor: pointer;
+    background-color: rgb(230, 60, 73);
+    color: white;
+}

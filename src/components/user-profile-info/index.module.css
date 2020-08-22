@@ -1,15 +1,11 @@
 .details {
     width: 60em;
-    margin: 3em auto;
+    margin: 2em auto;
     /* background-color: rgba(255, 255, 255, 0.904); */
     padding: 1em;
-    text-align: center;
-    
- 
+    text-align: center; 
 }
-.url{
-    padding-bottom: 10em;
-}
+
 .image {
     margin-top: 10px;
     width: 200px;
@@ -24,7 +20,11 @@
 
 .info {
     text-align: center;
-    margin: 10px;
-    margin-top: 2em;
+    margin: 1.2em;
     font-size: larger;
+}
+
+.username {
+    font-size: 2em;
+    margin-bottom: 1.2em;
 }
