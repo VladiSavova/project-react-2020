@@ -49,17 +49,7 @@ const Navigation = () => {
                 <Route path='/blog/post/:postId' >
                     {loggedIn ? (<PostDetailsPage />) : (<Redirect to='/login' />)}
                 </Route>
-
                 <Route component={Error} />
-
-                {/*
-               
-                <Route path='/blog/comment-post/:postId' >
-                    {loggedIn ? (<CommentPostPage />) : (<Redirect to='/login' />)}
-                </Route>
-
-               
-                 */}
             </Switch>
         </BrowserRouter>
     )

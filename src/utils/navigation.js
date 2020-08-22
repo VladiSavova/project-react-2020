@@ -29,10 +29,6 @@ const getNavigation = (loggedIn, user) => {
             link: '/'
         },
         {
-            title: 'Blog',
-            link: '/blog'
-        },
-        {
             title: 'Login',
             link: '/login'
         },
