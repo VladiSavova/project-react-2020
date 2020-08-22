@@ -16,11 +16,12 @@ This is my simple project made with Create-react-app.
 
 ### Private/user part (available for authenticate users):
 - home page
+- my profile
+- edit username
 - create posts
 - all posts
 - my posts
-- my profile
-- edit username
+- edit post if you are author of it
 - delete post if you are author of it
 - like post if you are not author of it
 - logout
