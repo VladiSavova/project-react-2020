@@ -2,7 +2,6 @@
 This is my simple project made with Create-react-app.
 
 ## Project is Build with:
-
 #### React - Front-end framework userd for front-end part for this project
 #### Express - Back-end framework  used for back-end part for this project
 #### Mongoose - Libraly for MongoDB and Node.js
@@ -13,9 +12,10 @@ This is my simple project made with Create-react-app.
 ### Public part (available for no-authenticate users/guests):
 - register
 - login 
-- Home page 
+- home page
 
 ### Private/user part (available for authenticate users):
+- home page
 - create posts
 - all posts
 - my posts
@@ -25,8 +25,9 @@ This is my simple project made with Create-react-app.
 - like post if you are not author of it
 - logout
 
-## How to start project
 
-### Download project
-### In terminal install - npm install 
-### Project will run on http://localhost:3000
+## Run project:
+#### When project is cloned or downloaded, type in the terminal both in Server and Client directory: **npm / yarn install**
+#### Run the Web server - to run server type in terminal **node index**
+#### Run the React applicaition - the app uses React for client side. To run the App type in terminal **npm / yarn start**
+#### Default, the application is running on: localhost:3000
