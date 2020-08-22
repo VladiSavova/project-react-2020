@@ -6,7 +6,6 @@ const PostDetailsInfo = ({ post }) => {
     return (
 
             <div className={styles.info}>
-                <h2>{post.title}</h2>    
                 <img alt="postImage" src={post.image}></img>
                 <Paragraph label='Author' value={post.author.username}/> 
                 <h3>Post Description:</h3>
