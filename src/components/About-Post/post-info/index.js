@@ -5,7 +5,6 @@ import Paragraph from '../../paragraph/index';
 const PostDetailsInfo = ({ post }) => {
 
     return (
-
             <div className={styles.info}>
                 <img alt="postImage" src={post.image}  className={styles.image} ></img>
                 <Paragraph label='Author' value={post.author.username}/> 

@@ -41,8 +41,7 @@ const ProfilePage = () => {
         )
     }
 
-    return (
-        
+    return (       
         <PageLayout>
             <UserInfo user={user} />
             <Posts userId={user._id} title='My Posts' noPostsMsg="You don't have any posts yet. Write some posts and here will see them." />

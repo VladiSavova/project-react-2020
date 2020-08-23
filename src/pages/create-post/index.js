@@ -35,7 +35,6 @@ const CreatePostPage = () => {
             return;
         }
       
-
         await fetch('http://localhost:9999/api/publication', {
             method: 'POST',
             body: JSON.stringify({

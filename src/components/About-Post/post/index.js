@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './index.module.css';
 import LinkButton from '../../button/link-button';
 
-const Post = ({ title, image, description, likes, author, _id }) => {
+const Post = ({ title, image, _id }) => {
 
     return (
         <div className={styles.post}>
